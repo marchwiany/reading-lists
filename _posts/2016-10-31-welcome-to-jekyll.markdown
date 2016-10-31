@@ -1,9 +1,18 @@
 ---
 title: Welcome to Jekyll!
-date: 2016-10-31 19:38:51 Z
+date: 2016-10-31 19:38:00 Z
 categories:
 - jekyll
 - update
+Details:
+  Author: 
+  Number of Pages: 
+  Date Published: 
+  City Published: 
+  Readers List Rank: 
+  Boards List Rank: 
+Quotes:
+- 
 layout: post
 ---
 
