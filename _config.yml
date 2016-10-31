@@ -19,3 +19,16 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+defaults:
+  – scope:
+      type: "posts"
+    values:
+      Details:
+        Author:
+        Number of Pages:
+        Date Published:
+        City Published:
+        Readers List Rank:
+        Boards List Rank:
+      Quotes:
