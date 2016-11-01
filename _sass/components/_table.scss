@@ -1,0 +1,57 @@
+table{
+  background-color: $white-base;
+  box-shadow: $card-box-shadow;
+  width: 100%;
+
+  th, td {
+    display: table-cell;
+    @include rem(margin, 15px 5px);
+    @include rem(padding, 10px);
+    @include s-medium;
+    text-align: left;
+    width: inherit;
+    vertical-align: middle;
+  }
+
+  th, td:before {
+    color: $grey-base;
+    font-weight: $bold;
+    @include s-base;
+    letter-spacing: 0.5px;
+  }
+
+  th{
+    background-color: $blue-base;
+    color: $white-base;
+  }
+
+  tbody{
+    overflow: auto;
+    tr{
+      &:nth-child(even){
+        background-color: rgba(lighten($blue-base, 68%), 0.7);
+      }
+
+      &:nth-child(n):hover, &.selected{
+        background-color: $yellow-light;
+        @include transition (all 0.3s ease-in-out);
+      }
+    }
+  }
+
+  .button-grey-outline {
+    margin: 0px;
+    @include rem(padding, 4px 0px);
+    @include s-small;
+    min-width: 100px;
+    width: 100px;
+  }
+}
+
+table{
+  select{
+    background-size: 9px;
+    height: 24px;
+    width: 56px;
+  }
+}

@@ -1,0 +1,32 @@
+.modal-contents{
+  background-color: rgba(0, 0, 0, 0.7);
+  @include transition(all 0.3s ease-in-out);
+  @include position(fixed, 0px 0px 0px 0px);
+  z-index: 9999999;
+
+  .modal-block{
+    @include vertical-horizontal-center;
+    text-align: left;
+    width: 500px;
+  }
+}
+
+.modal-header{
+  background-color: $blue-base;
+  @include rem(padding, 20px);
+
+  h2{
+    color: $white-base;
+    display: inline-block;
+  }
+
+  a{
+    @include rem(margin-top, 5px);
+    float: right;
+  }
+}
+
+.modal-content{
+  background-color: $white-base;
+  @include rem(padding, 20px);
+}

@@ -1,0 +1,61 @@
+//MAIN COLORS
+
+  //BLACK
+    $black-light:  #DCDCDC;
+    $black-base:   #4A4A4A;
+    $black-dark:   #15191C;
+
+  //BLUE
+    $blue-light:   #023773;
+    $blue-base:    #353E49;
+    $blue-dark:    #293039;
+
+  //GREEN
+    $green-base:   #00BA81;
+    $green-dark:   #5B945C;
+
+  //GREY
+    $grey-lighter: #EEEEEE;
+    $grey-light:   #F1F1F1;
+    $grey-base:    #9B9B9B;
+    $grey-dark:    #D8D8D8;
+
+  //RED
+    $red-light:    #FF706D;
+    $red-base:     #C70018;
+    $red-dark:     #b30016;
+
+  //YELLOW
+    $yellow-light: #FCF1D7;
+    $yellow-base:  #EDA900;
+    $yellow-dark:  #E5A100;
+
+  //WHITE
+    $white-light:  #F4F4F4;
+    $white-base:   #FFFFFF;
+    $white-med:    #DEDEDE;
+    $white-dark:   #DCDCDC;
+
+  //MAIN PALETTE LIST
+  $colors: (
+    black-light   $black-light,
+    black-base    $black-base,
+    black-dark    $black-dark,
+    blue-light    $blue-light,
+    blue-base     $blue-base,
+    blue-dark     $blue-dark,
+    grey-light    $grey-light,
+    grey-base     $grey-base,
+    grey-dark     $grey-dark,
+    green-base    $green-base,
+    green-dark    $green-dark,
+    red-light     $red-light,
+    red-base      $red-base,
+    red-dark      $red-dark,
+    yellow-light  $yellow-light,
+    yellow-base   $yellow-base,
+    yellow-dark   $yellow-dark,
+    white-light   $white-light,
+    white-base    $white-base,
+    white-dark    $white-dark
+  );

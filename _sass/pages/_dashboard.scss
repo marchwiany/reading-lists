@@ -1,0 +1,52 @@
+.page-content{
+  @include media($tablet){
+    margin-left: $nav-desktop-width;
+    width: calc(100% - $nav-desktop-width);
+  }
+
+  .wrapper{
+    @include rem(padding, 40px 20px);
+  }
+}
+
+.book{
+  background-color: $white-base;
+  height: 315px;
+  @include span-columns(3 of 12);
+  @include omega(4n);
+  text-align: center;
+}
+
+//Post
+.post{
+  @include span-columns(7 of 12);
+  @include shift(2.5);
+
+  p:first-child{
+    @include s-big;
+  }
+}
+
+.post-main-details{
+  border: 1px solid $white-med;
+  text-align: center;
+}
+
+.post-details{
+  display: flex;
+  @include rem(margin, -1px 0px 30px 0px);
+
+  li{
+    border: 1px solid $white-med;
+    display: inline-block;
+    border-spacing: collapse;
+    text-align: center;
+    width: calc(100%/3);
+    height: 90px;
+
+    span{
+      color: $white-med;
+      @include s-bigger;
+    }
+  }
+}

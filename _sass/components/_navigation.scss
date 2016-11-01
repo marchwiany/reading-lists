@@ -1,0 +1,45 @@
+// Site Navigation Styles
+// ========================================
+$nav-desktop-width: 250px;
+
+
+/*-----------------------
+Primary Nav
+-----------------------*/
+
+.site-header{
+  background-color: $blue-base;
+  @include position(fixed, 0px null 0px 0px);
+  @include transition(all 0.3s ease-in-out);
+  width: $nav-desktop-width;
+  z-index: 9;
+
+  li { display: block; }
+
+  p{
+    color: $white-base;
+  }
+
+  a{
+    border-left: 4px solid transparent;
+    color: $white-base;
+    font-weight: $regular;
+    @include s-base;
+    @include rem(padding, 12px 40px);
+    display: inline-block;
+    opacity: 0.5;
+    width: 100%;
+
+    &:hover{
+      background-color: lighten($blue-base, 6%);
+    }
+
+    &.active{
+      background-color: lighten($blue-base, 6%);
+      border-left: 4px solid $yellow-base;
+      opacity: 1;
+      font-weight: $bold;
+    }
+  }
+}
+

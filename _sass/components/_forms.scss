@@ -1,0 +1,182 @@
+// Form Styles Stylesheet
+// ========================================
+
+// Labels
+label{
+  display: inline-block;
+  @include rem(margin, 20px 0px 7px);
+  @include s-base;
+  font-weight: $bold;
+}
+
+// Inputs
+#{$all-text-inputs},
+select,
+textarea{
+  @include appearance(none);
+  @include placeholder { font-style: italic; }
+  @include s-medium;
+  @include font-type($primary-sans-serif, normal, normal);
+  border: 1px solid $black-light;
+  border-radius: 2px;
+  color: $black-base;
+  box-sizing: border-box;
+  height: 31px;
+  @include rem(padding, 8px);
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+
+  &:focus{
+    border-color: $blue-base;
+    outline: none;
+  }
+}
+
+/*-----------------------
+Textarea
+-----------------------*/
+.details .textarea-field{
+  label{ width: 100%; }
+}
+
+textarea,
+textarea[type="text"]{
+  height: 100px; resize: none; }
+
+
+/*-----------------------
+Select
+-----------------------*/
+select{
+  background-image: url("../images/dropdown.svg");
+  background-position: right 10px top 50%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  @include rem(padding, 0px 8px);
+  width: 100%;
+}
+
+/*-----------------------
+Upload Button
+-----------------------*/
+.button-grey-base{
+  border: 1px solid $black-light;
+  border-radius: 2px;
+  height: 42px;
+  width: 100px;
+  min-width: 0px;
+}
+
+input[type="submit"]{
+  border: none;
+  @include rem(padding, 8px);
+  @include button;
+  width: 100%;
+
+  @include media($tablet){
+    max-width: 200px;
+  }
+
+  &:hover{
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.half-fields{
+  display: inline-block;
+  width: 100%;
+
+  .half-field{
+    @include media($tablet){
+      @include span-columns(6 of 12);
+    }
+  }
+}
+
+form{
+  @include media($tablet-landscape){
+    @include span-columns(6.5 of 12);
+  }
+}
+
+/*-----------------------
+Errors
+-----------------------*/
+.error{
+  color: $red-base;
+  @include rem(margin-top, 5px);
+  @include s-tiny;
+}
+
+/*-----------------------
+Checkbox
+-----------------------*/
+.checkbox{
+  label{
+    width: inherit;
+  }
+}
+
+input[type="checkbox"]{
+  @include appearance(none);
+  background-color: $white-base;
+  border: 1px solid $black-light;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  @include rem(height, 20px);
+  @include rem(width, 20px);
+  outline: none;
+  display: inline-block;
+  @include rem(margin-right, 10px);
+
+  &:checked{
+
+    &:after{
+      color: $blue-base;
+      content: '\2713';
+      display: block;
+      font-size: 17px;
+      height: 17px;
+      @include transition(all 0.2s ease-in);
+      margin-left: 1px;
+      text-align: center;
+      width: 17px;
+      -webkit-position: absolute;
+      -webkit-z-index: 3;
+    }
+  }
+}
+
+//Two Column Checkboxes
+.two-column-checkbox .checkbox-group, .region-group{
+    display: block;
+    @include columns(2);
+    width: 100%;
+
+
+  label{
+    @include rem(margin, 10px 0px 0px);
+  }
+}
+
+.checkbox-group{
+  label{
+    @include rem(margin, 12px 0px 0px);
+  }
+}
+
+//Dark Inputs
+.dark-inputs{
+  input, select{
+    background-color: $white-dark;
+  }
+}
+
+//Light Inputs
+.light-inputs{
+  input, select{
+    background-color: $grey-light;
+  }
+}

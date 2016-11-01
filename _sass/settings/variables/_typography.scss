@@ -1,0 +1,33 @@
+// Typography Variables
+// ========================================
+
+  // Font Families
+
+  $primary-sans-serif: 'Kefa', serif;
+
+
+  // Sizes
+  $font-size-base: 15px;
+
+  $s-giga:    160px;
+  $s-mega:    100px;
+
+  $s-huge:    36px;
+  $s-large:   25px;
+  $s-bigger:  22px;
+  $s-big:     18px;
+  $s-medium:  15px;
+  $s-base:    13px;
+  $s-small:   12px;
+  $s-tiny:    10px;
+
+  // Line Heights
+  $base-line-height: $font-size-base * 1.5;
+  $base-line-loose: $font-size-base * 1.9;
+  $base-line-small:  $font-size-base;
+
+  // Font Weights
+  $light: 300;
+  $regular: 400;
+  $bold: 700;
+  $heavy: 800;

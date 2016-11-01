@@ -1,0 +1,60 @@
+//ICONS
+
+@mixin sprite {
+  background-image: url('../../images/sprite.svg');
+  background-repeat: no-repeat;
+  display: inline-block;
+  text-indent: -99999px;
+  vertical-align: middle;
+}
+
+@mixin icon-set($height: 30px, $width: 30px){
+  background-size: ($width * 5) ($width * 1);
+  height: $height;
+  width: $width;
+}
+
+$icon-sizes: (
+  xsmall 20px,
+  small  35px,
+  large  70px,
+  xl     100px
+);
+
+//LIST
+$sprite-icons: (
+  admin           0,
+  technician      1,
+  query           2,
+  chart           3,
+  report          4
+);
+
+//LOOP
+@each $sprite-icon in $sprite-icons{
+  $icon-name:   nth($sprite-icon, 1);
+  $position-num: nth($sprite-icon, 2);
+
+  @each $icon-size in $icon-sizes{
+    $size-name: nth($icon-size, 1);
+    $size:      nth($icon-size, 2);
+    $position: $size * $position-num;
+
+    .#{$icon-name}-#{$size-name}{
+      background-position: -($position * 1) 0px;
+      @include icon-set($width: $size, $height: $size);
+      @include sprite;
+    }
+
+    .#{$icon-name}-#{$size-name}-responsive{
+      background-position: -($position * 0.5) 0px;
+      @include icon-set($width: ($size * 0.5), $height: ($size * 0.5));
+      @include sprite;
+
+      @include media($tablet){
+        background-position: -($position * 1) 0px;
+        @include icon-set($width: $size, $height: $size);
+      }
+    }
+  }
+}

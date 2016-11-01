@@ -5,12 +5,26 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <div class="post-main-details">
+      <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+      <p>{{ page.Details.Author }}</p>
+    </div>
+    <ul class="post-details">
+      <li>Pages <span>{{ page.Details['Number of Pages'] }}</span></li>
+      <li>Published <span>{{ page.Details.['Date Published'] }}</span></li>
+      <li>City <span>{{ page.Details.['City Published'] }}</span></li>
+    </ul>
   </header>
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
+
+    <h2>Quotes</h2>
+    {% for Quote in page.Quotes %}
+      <blockquote>{{ Quote }}</blockquote>
+    {% endfor %}
   </div>
+
+
 
 </article>
