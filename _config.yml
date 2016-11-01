@@ -8,6 +8,19 @@ collections:
   uploads:
     title: Uploads
     output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    Details:
+      Author:
+      Number of Pages:
+      Date Published:
+      City Published:
+      Readers List Rank:
+      Boards List Rank:
+    Quotes:
 email: your-email@domain.com
 description: 'Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for Google search
@@ -19,18 +32,6 @@ url: http://yourdomain.com
 twitter_username: jekyllrb
 github_username: jekyll
 markdown: kramdown
+
 gems: [bourbon, neat]
 
-defaults:
-  -
-    scope:
-      type: "posts"
-    values:
-      Details:
-        Author:
-        Number of Pages:
-        Date Published:
-        City Published:
-        Readers List Rank:
-        Boards List Rank:
-      Quotes:
