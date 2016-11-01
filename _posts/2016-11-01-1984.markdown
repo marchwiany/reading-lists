@@ -1,0 +1,9 @@
+---
+title: '1984'
+date: 2016-11-01 12:51:00 Z
+Details:
+  Author: George Orwell
+  Readers List Rank: 6
+  Boards List Rank: 13
+---
+
