@@ -21,6 +21,7 @@ defaults:
       City Published:
       Readers List Rank:
       Boards List Rank:
+      Color:
     Quotes:
     layout: post
 email: your-email@domain.com
@@ -35,3 +36,4 @@ twitter_username: jekyllrb
 github_username: jekyll
 markdown: kramdown
 gems: [bourbon, neat]
+
