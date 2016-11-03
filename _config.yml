@@ -13,7 +13,7 @@ defaults:
     path: ''
     type: posts
   values:
-    permalink: /:title.html
+    permalink: "/:title.html"
     Details:
       Author:
       Number of Pages:
@@ -35,5 +35,6 @@ url: http://yourdomain.com
 twitter_username: jekyllrb
 github_username: jekyll
 markdown: kramdown
-gems: [bourbon, neat]
-
+gems:
+- bourbon
+- neat
