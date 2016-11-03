@@ -48,8 +48,8 @@ a.bookmark{
   text-align: center;
   width: 80%;
   display: block;
-  margin: 0 auto 30px;
   @include rem(padding, 20px);
+  margin: 0 auto 30px;
   position: relative;
 
   p{

@@ -5,12 +5,13 @@
   }
 
   .wrapper{
-    @include rem(padding, 40px 40px);
   }
 }
 
 .home-header{
+  background-color: $white-base;
   display: inline-block;
+  @include rem(padding, 20px 40px);
   width: 100%;
 
   h1{
@@ -34,6 +35,17 @@
   }
 }
 
+.home{
+  background-color: #101C29;
+  min-height: 100vh;
+}
+
+.post-list{
+  display: inline-block;
+  @include rem(padding, 40px 40px 20px);
+  width: 100%;
+}
+
 .book{
   background-color: $white-base;
   box-shadow: 0px 0px 4px 0px rgba(192,192,192,0.50);
@@ -44,8 +56,13 @@
   text-align: center;
 
   h5{
-    @include rem(margin-top, 120px);
+    @include rem(margin-top, 20px);
   }
+}
+
+.color{
+  background-color: #D8D8D8;
+  height: 70%;
 }
 
 //Post

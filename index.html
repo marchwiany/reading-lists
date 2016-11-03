@@ -21,12 +21,11 @@ layout: default
     {% for post in site.posts %}
       <li class="book">
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          <div class="color" style="background-color: {{ post.Details.Color }};">
+          <div class="color" style="background-color: {{ post.Color }};">
 
           </div>
           <h5>{{ post.title }}</h5>
           <h6>{{ post.Details.Author }}</h6>
-          <h2>{{ post.Details.Color }}</h2>
         </a>
       </li>
     {% endfor %}
