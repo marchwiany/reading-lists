@@ -23,32 +23,3 @@
 // Page Styles
   @import "pages/dashboard";
   @import "pages/book";
-
-
-
-
-.accordion-tabs {
-  padding: 0;
-
-  .tab-header-and-content {
-    list-style: none;
-    display: inline;
-  }
-
-  .tab-link {
-    padding-right: 1em;
-    display: inline-block;
-  }
-
-  .is-active {
-    color: #ff0000;
-  }
-
-  .tab-content {
-    display: none;
-    width: 100%;
-    float: left;
-  }
-}
-
-

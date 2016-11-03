@@ -3,18 +3,31 @@ layout: default
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Reading List</h1>
+  <div class="home-header">
+    <h1 class="page-heading">Reading List</h1>
+    <ul class="stats">
+      <li>
+        <h4>1122</h4>
+        <p>Pages Read</p>
+      </li>
+      <li>
+        <h4>{{ site.posts.content != empty | size }} / {{ site.posts | size }}</h4>
+        <p>Books Read</p>
+      </li>
+    </ul>
+  </div>
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          {{ post.title }}
-          {{ post.Details.Author }}
-          </a>
-        </h2>
+      <li class="book">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          <div class="color" style="background-color: {{ post.Details.Color }};">
+
+          </div>
+          <h5>{{ post.title }}</h5>
+          <h6>{{ post.Details.Author }}</h6>
+          <h2>{{ post.Details.Color }}</h2>
+        </a>
       </li>
     {% endfor %}
   </ul>

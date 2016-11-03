@@ -5,16 +5,47 @@
   }
 
   .wrapper{
-    @include rem(padding, 40px 20px);
+    @include rem(padding, 40px 40px);
+  }
+}
+
+.home-header{
+  display: inline-block;
+  width: 100%;
+
+  h1{
+    float: left;
+  }
+
+  .stats{
+    float: right;
+
+    li{
+      display: inline-block;
+      @include rem(margin-left, 30px);
+      text-align: center;
+
+      h4{ margin: 0px; }
+
+      p{
+        @include s-small;
+      }
+    }
   }
 }
 
 .book{
   background-color: $white-base;
+  box-shadow: 0px 0px 4px 0px rgba(192,192,192,0.50);
   height: 315px;
-  @include span-columns(3 of 12);
-  @include omega(4n);
+  @include rem(margin-bottom, 20px);
+  @include span-columns(2.4 of 12);
+  @include omega(5n);
   text-align: center;
+
+  h5{
+    @include rem(margin-top, 120px);
+  }
 }
 
 //Post
@@ -22,13 +53,18 @@
   @include span-columns(7 of 12);
   @include shift(2.5);
 
-  p:first-child{
-    @include s-big;
+  .content{
+    @include rem(margin-bottom, 30px);
+
+    p:first-child{
+      @include s-big;
+    }
   }
 }
 
 .post-main-details{
   border: 1px solid $white-med;
+  @include rem(padding, 30px);
   text-align: center;
 }
 
@@ -36,13 +72,24 @@
   display: flex;
   @include rem(margin, -1px 0px 30px 0px);
 
+  .details{
+    @include vertical-horizontal-center;
+    width: 90%;
+  }
+
   li{
     border: 1px solid $white-med;
-    display: inline-block;
     border-spacing: collapse;
+    display: inline-block;
+    height: 90px;
     text-align: center;
     width: calc(100%/3);
-    height: 90px;
+    position: relative;
+
+    p{
+      @include s-small;
+      @include rem(margin, 0px 5px 0px 0px);
+    }
 
     span{
       color: $white-med;

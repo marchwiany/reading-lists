@@ -1,19 +1,19 @@
 <header class="site-header" role="banner">
-  <div class="bookmark">
-    <a href="/">
-      <p>100 Best Novels</p>
-      <p>Modern Library</p>
-    </a>
-  </div>
+  <a href="/" class="bookmark">
+    <p>100 Best Novels</p>
+    <p>Modern Library</p>
+  </a>
   <ul class="accordion-tabs">
     <li class="tab-header-and-content">
       <a href="javascript:void(0)" class="is-active tab-link">Reader’s List</a>
       <div class="tab-content">
         {% for post in site.posts %}
           {% if post.Details['Readers List Rank'] > 0 %}
-          <a href="{{ post.url }}">
-            <p>{{ post.title }}</p>
-            <p>{{ post.Details.Author }}</p>
+          <a href="{{ post.url }}" class="book-link">
+            <div class="book-name">
+              <p>{{ post.title }}</p>
+              <p>{{ post.Details.Author }}</p>
+            </div>
           </a>
           {% endif %}
         {% endfor %}
@@ -24,9 +24,11 @@
       <div class="tab-content">
        {% for post in site.posts %}
          {% if post.Details['Boards List Rank'] > 0 %}
-         <a href="{{ post.url }}">
-           <p>{{ post.title }}</p>
-           <p>{{ post.Details.Author }}</p>
+         <a href="{{ post.url }}" class="book-link">
+           <div class="book-name">
+             <p>{{ post.title }}</p>
+             <p>{{ post.Details.Author }}</p>
+           </div>
          </a>
          {% endif %}
        {% endfor %}
