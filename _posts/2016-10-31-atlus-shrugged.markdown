@@ -16,6 +16,7 @@ Quotes:
 - All they that take the sword shall perish with the sword.
 - You, whom I have always loved and never found, you whom I expected to see at the
   end of the rails beyond the horizon.
+Color: "#EC5555"
 layout: post
 ---
 
