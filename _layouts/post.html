@@ -4,31 +4,33 @@ layout: default
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <div class="post-main-details">
-      <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-      <p>{{ page.Details.Author }}</p>
+  <header class="post-header" style="background-color: {{ page.Color }};">
+    <div class="post-header-content">
+      <div class="post-main-details">
+        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+        <p>{{ page.Details.Author }}</p>
+      </div>
+      <ul class="post-details">
+        <li>
+          <div class="details">
+            <p>Pages</p>
+            <span>{{ page.Details['Number of Pages'] }}</span>
+          </div>
+        </li>
+        <li>
+          <div class="details">
+            <p>Published</p>
+            <span>{{ page.Details.['Date Published'] }}</span>
+          </div>
+        </li>
+        <li>
+          <div class="details">
+            <p>City</p>
+            <span>{{ page.Details.['City Published'] }}</span>
+          </div>
+        </li>
+      </ul>
     </div>
-    <ul class="post-details">
-      <li>
-        <div class="details">
-          <p>Pages</p>
-          <span>{{ page.Details['Number of Pages'] }}</span>
-        </div>
-      </li>
-      <li>
-        <div class="details">
-          <p>Published</p>
-          <span>{{ page.Details.['Date Published'] }}</span>
-        </div>
-      </li>
-      <li>
-        <div class="details">
-          <p>City</p>
-          <span>{{ page.Details.['City Published'] }}</span>
-        </div>
-      </li>
-    </ul>
   </header>
 
   <div class="post-content" itemprop="articleBody">

@@ -16,6 +16,7 @@
 
   h1{
     float: left;
+    margin: 0px;
   }
 
   .stats{
@@ -67,8 +68,10 @@
 
 //Post
 .post{
-  @include span-columns(7 of 12);
-  @include shift(2.5);
+  .post-content{
+    @include span-columns(7 of 12);
+    @include shift(2.5);
+  }
 
   .content{
     @include rem(margin-bottom, 30px);
@@ -79,8 +82,20 @@
   }
 }
 
+
+.post-header{
+  display: inline-block;
+  @include rem(margin-bottom, 30px);
+  width: 100%;
+
+  .post-header-content{
+    @include span-columns(7 of 12);
+    @include shift(2.5);
+  }
+}
+
 .post-main-details{
-  border: 1px solid $white-med;
+  //border: 1px solid $white-med;
   @include rem(padding, 30px);
   text-align: center;
 }
@@ -95,7 +110,7 @@
   }
 
   li{
-    border: 1px solid $white-med;
+    //border: 1px solid $white-med;
     border-spacing: collapse;
     display: inline-block;
     height: 90px;

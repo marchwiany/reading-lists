@@ -7,7 +7,7 @@
     <li class="tab-header-and-content">
       <a href="javascript:void(0)" class="is-active tab-link">Reader’s List</a>
       <div class="tab-content">
-        {% for post in site.posts %}
+        {% for post in site.posts reversed %}
           {% if post.Details['Readers List Rank'] > 0 %}
           <a href="{{ post.url }}" class="book-link">
             <div class="book-name">
@@ -22,7 +22,7 @@
     <li class="tab-header-and-content">
       <a href="javascript:void(0)" class="tab-link">Board’s List</a>
       <div class="tab-content">
-       {% for post in site.posts %}
+       {% for post in site.posts reversed %}
          {% if post.Details['Boards List Rank'] > 0 %}
          <a href="{{ post.url }}" class="book-link">
            <div class="book-name">

@@ -18,7 +18,7 @@ layout: default
   </div>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in site.posts reversed %}
       <li class="book">
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           <div class="color" style="background-color: {{ post.Color }};">
