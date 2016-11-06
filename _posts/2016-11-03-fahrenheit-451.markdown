@@ -3,6 +3,10 @@ title: Fahrenheit 451
 date: 2016-11-03 20:55:00 Z
 Details:
   Author: Ray Bradbury
+  Number of Pages: 256
+  Date Published: 1953
+  City Published: United States
   Readers List Rank: 77
+Color: "#E22A2A"
 ---
 
