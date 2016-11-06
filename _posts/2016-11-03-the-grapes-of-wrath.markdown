@@ -5,5 +5,6 @@ Details:
   Author: John Steinbeck
   Readers List Rank: 22
   Boards List Rank: 10
+Color: "#955CC7"
 ---
 
