@@ -3,7 +3,11 @@ title: Catch-22
 date: 2016-11-03 19:08:00 Z
 Details:
   Author: Joseph Heller
+  Number of Pages: 544
+  Date Published: 1961
+  City Published: United States
   Readers List Rank: 12
   Boards List Rank: 7
+Color: "#044897"
 ---
 
