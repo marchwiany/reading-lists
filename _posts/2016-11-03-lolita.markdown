@@ -3,6 +3,9 @@ title: Lolita
 date: 2016-11-03 20:22:00 Z
 Details:
   Author: Vladimir Nabokov
+  Number of Pages: 336
+  Date Published: 1955
+  City Published: France
   Readers List Rank: 34
   Boards List Rank: 4
 Color: "#DC304E"
