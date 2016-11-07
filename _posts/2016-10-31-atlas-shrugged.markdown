@@ -1,5 +1,5 @@
 ---
-title: Atlus Shrugged
+title: Atlas Shrugged
 date: 2016-10-31 19:38:00 Z
 categories:
 - jekyll
@@ -10,7 +10,6 @@ Details:
   Date Published: 1960
   City Published: United Kingdom
   Readers List Rank: 1
-  Boards List Rank: 
 Quotes:
 - We must not see the world as they want us to see it.
 - All they that take the sword shall perish with the sword.
