@@ -22,12 +22,24 @@ layout: default
       <li class="book">
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           <div class="color" style="background-color: {{ post.Color }};">
-
           </div>
-          <h5>{{ post.title }}</h5>
-          <h6>{{ post.Details.Author }}</h6>
+          <figcaption>
+            <h5>{{ post.title }}</h5>
+            <h6>{{ post.Details.Author }}</h6>
+            <ul>
+              <li>
+                <h5>{{ post.Details['Number of Pages'] }}</h5>
+                <h6>Pages</h6>
+              </li>
+              <li>
+                <h5>{{ post.Details.['Date Published'] }}</h5>
+                <h6>Published</h6>
+              </li>
+            </ul>
+          </figcaption>
         </a>
       </li>
     {% endfor %}
   </ul>
 </div>
+

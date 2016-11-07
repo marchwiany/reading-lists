@@ -8,6 +8,11 @@
   }
 }
 
+.home{
+  background-color: #101C29;
+  min-height: 100vh;
+}
+
 .home-header{
   background-color: $white-base;
   display: inline-block;
@@ -20,6 +25,7 @@
   }
 
   .stats{
+    @include rem(margin-top, 6px);
     float: right;
 
     li{
@@ -36,11 +42,6 @@
   }
 }
 
-.home{
-  background-color: #101C29;
-  min-height: 100vh;
-}
-
 .post-list{
   display: inline-block;
   @include rem(padding, 40px 40px 20px);
@@ -55,15 +56,47 @@
   @include span-columns(2.4 of 12);
   @include omega(5n);
   text-align: center;
+  @include transition(all 0.3s ease-in-out);
+  overflow: hidden;
 
-  h5{
-    @include rem(margin-top, 20px);
+
+  figcaption{
+    background-color: $white-base;
+    @include transition(all 0.3s ease-in-out);
+    @include rem(padding, 22px 10px);
+
+    ul{
+      border-top: 1px solid $white-med;
+      @include rem(padding-top, 10px);
+
+      li{
+        display: inline-block;
+        width: 48%;
+
+        h5{
+          margin: 0px;
+        }
+
+        h6{  }
+      }
+    }
+  }
+
+  &:hover{
+    figcaption{
+      @include transform(translateY(-50px));
+      @include transition(all 0.3s ease-in-out);
+    }
   }
 }
 
 .color{
   background-color: #D8D8D8;
   height: 70%;
+}
+
+.unread{
+  opacity: 0.4;
 }
 
 //Post
@@ -87,15 +120,35 @@
   display: inline-block;
   @include rem(margin-bottom, 30px);
   width: 100%;
+  @include animation(test 2s ease);
+  height: 400px;
+  position: relative;
+  //@include animation-delay(2s);
 
   .post-header-content{
     @include span-columns(7 of 12);
-    @include shift(2.5);
+    @include vertical-horizontal-center;
+    @include animation(fade-in 1s ease);
+
+    h1, p, span{ color: $white-base; }
   }
+
 }
 
+@include keyframes(test){
+  0% { height: 100vh; }
+  80% { height: 100vh; }
+
+  100% { height: 400px; }
+}
+
+@include keyframes(fade-in){
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
 .post-main-details{
-  //border: 1px solid $white-med;
   @include rem(padding, 30px);
   text-align: center;
 }
@@ -129,3 +182,47 @@
     }
   }
 }
+
+.post-content{
+  @include animation(fade-in-up 3s ease-in);
+}
+
+@include keyframes(fade-in-up){
+  0%{ opacity:0; @include transform(translateY(20%)); }
+  80%{ opacity:0; @include transform(translateY(20%)); }
+  100%{ opacity:1; @include transform(translateY(0%));}
+}
+
+.book {
+  -webkit-animation: fadeIn .5s ease;
+  animation: fadeIn .5s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  }
+
+.post-list {
+  opacity: 0;
+  -webkit-animation: fadeIn .5s ease;
+  animation: fadeIn .5s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  }
+
+$elements: 100;
+@for $i from 1 to $elements {
+  .book:nth-child(#{$i}n) {
+  -webkit-animation-delay: ($i*.1s);
+  animation-delay: ($i*.1s);
+  }
+.post-list:nth-child(#{$i}n) {
+-webkit-animation-delay: ($i*.1s);
+animation-delay: ($i*.1s);
+}
+}
+
+@include keyframes(fadeIn) {
+  0% {opacity: 0;}
+100% {opacity: 1;display:block;}
+}
+

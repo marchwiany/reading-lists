@@ -16,11 +16,13 @@
     {% include footer.html %}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--
     <script type="text/javascript">
-      $(".post-list li, .post").each(function(index) {
+      $(".post").each(function(index) {
           $(this).hide().delay(200*index).fadeIn(300);
       });
-    </script>
+    </script>-->
+
     <script type="text/javascript">
       $(document).ready(function () {
         $('.accordion-tabs').each(function(index) {
@@ -40,16 +42,7 @@
           }
         });
       });
-      $(document).ready(function () {
-
-        $(".text-input").blur(function () {
-            if ($(this).val() == '') {
-                $(this).addClass('error');
-            }
-        });
-      });
     </script>
 
   </body>
-
 </html>
