@@ -7,7 +7,7 @@ layout: default
     <h1 class="page-heading">Reading List</h1>
     <ul class="stats">
       <li>
-        <h4>1122</h4>
+        <h4>6050</h4>
         <p>Pages Read</p>
       </li>
       <li>
@@ -24,8 +24,12 @@ layout: default
           <div class="color" style="background-color: {{ post.Color }};">
           </div>
           <figcaption>
-            <h5>{{ post.title }}</h5>
-            <h6>{{ post.Details.Author }}</h6>
+            <div class="post-teaser">
+              <div class="post-teaser-content">
+                <h5>{{ post.title }}</h5>
+                <h6 class="post-author">{{ post.Details.Author }}</h6>
+              </div>
+            </div>
             <ul>
               <li>
                 <h5>{{ post.Details['Number of Pages'] }}</h5>
@@ -42,4 +46,3 @@ layout: default
     {% endfor %}
   </ul>
 </div>
-

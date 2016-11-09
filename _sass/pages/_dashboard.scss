@@ -59,11 +59,14 @@
   @include transition(all 0.3s ease-in-out);
   overflow: hidden;
 
-
   figcaption{
     background-color: $white-base;
     @include transition(all 0.3s ease-in-out);
-    @include rem(padding, 22px 10px);
+    @include rem(padding, 0px 10px);
+
+    h6.post-author{
+      margin: 0px;
+    }
 
     ul{
       border-top: 1px solid $white-med;
@@ -77,16 +80,30 @@
           margin: 0px;
         }
 
-        h6{  }
+        h6{
+          color: $grey-base;
+          font-weight: normal;
+          @include s-tiny;
+        }
       }
     }
   }
 
   &:hover{
     figcaption{
-      @include transform(translateY(-50px));
+      @include transform(translateY(-60px));
       @include transition(all 0.3s ease-in-out);
     }
+  }
+}
+
+.post-teaser{
+  height: 95px;
+  position: relative;
+
+  .post-teaser-content{
+    @include vertical-horizontal-center;
+    width: 100%;
   }
 }
 
@@ -188,8 +205,8 @@
 }
 
 @include keyframes(fade-in-up){
-  0%{ opacity:0; @include transform(translateY(20%)); }
-  80%{ opacity:0; @include transform(translateY(20%)); }
+  0%{ opacity:0; @include transform(translateY(5%)); }
+  80%{ opacity:0; @include transform(translateY(5%)); }
   100%{ opacity:1; @include transform(translateY(0%));}
 }
 
@@ -223,6 +240,5 @@ animation-delay: ($i*.1s);
 
 @include keyframes(fadeIn) {
   0% {opacity: 0;}
-100% {opacity: 1;display:block;}
+100% {opacity: 1; display:block;}
 }
-

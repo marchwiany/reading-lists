@@ -118,4 +118,8 @@ blockquote{
     content:'”';
     display: inline-block;
   }
+
+  &:last-child{
+    border: none;
+  }
 }
